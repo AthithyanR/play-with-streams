@@ -8,8 +8,8 @@ const sleep = promisify(setTimeout)
 
 const rs = createReadStream('in.txt');
 const ws = createWriteStream('in.txt.br');
-// const rs = createReadStream('The.Incredible.Hulk.mp4');
-// const ws = createWriteStream('The.Incredible.Hulk.mp4.gz');
+// const rs = createReadStream('Yeh Ek Zindagi - Monica O My Darling 128 Kbps.mp3');
+// const ws = createWriteStream('Yeh Ek Zindagi - Monica O My Darling 128 Kbps.mp3.br');
 
 await asyncPipeline(rs, createBrotliCompress(), ws)
 
